@@ -146,13 +146,13 @@ function Index() {
       </a>
 
       <header style={{ width: "100%", background: "#0a345a" }}>
-        <div style={{ padding: "20px", textAlign: "center", color: "#fff" }}>
-          <h1 style={{ fontSize: "24px", marginBottom: "5px" }}>Tarifa obrigatória ISS (Imposto Sobre Serviços)</h1>
-          <p style={{ fontSize: "14px", opacity: 0.9 }}>Última etapa antes de acessar o Grupo VIP da Eduarda</p>
+        <div style={{ padding: "10px 16px", textAlign: "center", color: "#fff" }}>
+          <h1 style={{ fontSize: "15px", marginBottom: "2px", fontWeight: 700 }}>Tarifa obrigatória ISS (Imposto Sobre Serviços)</h1>
+          <p style={{ fontSize: "11px", opacity: 0.9, margin: 0 }}>Última etapa antes de acessar o Grupo VIP da Eduarda</p>
         </div>
       </header>
 
-      <div style={{ maxWidth: "550px", margin: "0 auto", padding: "16px" }}>
+      <div style={{ maxWidth: "550px", margin: "0 auto", padding: "16px", paddingBottom: "100px" }}>
         <div
           style={{
             background: "#fff",
@@ -178,19 +178,19 @@ function Index() {
 
         <div
           style={{
-            marginTop: "15px",
+            marginTop: "12px",
             background: "#fff6cf",
             border: "1px solid #e6c85c",
-            borderRadius: "12px",
-            padding: "18px",
+            borderRadius: "10px",
+            padding: "10px 12px",
             textAlign: "center",
           }}
         >
-          <small style={{ display: "block", color: "#8a6d00", fontWeight: 700, marginBottom: "8px" }}>ATENÇÃO</small>
-          <h2 style={{ color: "#0a345a", marginBottom: "10px", fontSize: "22px" }}>
+          <small style={{ display: "block", color: "#8a6d00", fontWeight: 700, marginBottom: "4px", fontSize: "11px" }}>ATENÇÃO</small>
+          <h2 style={{ color: "#0a345a", marginBottom: "4px", fontSize: "15px", fontWeight: 700 }}>
             Pagamento da Tarifa Obrigatória ISS
           </h2>
-          <div style={{ fontSize: "42px", fontWeight: 900, color: "#0a345a" }}>R$ 11,57</div>
+          <div style={{ fontSize: "26px", fontWeight: 900, color: "#0a345a" }}>R$ 11,57</div>
         </div>
 
         <div
@@ -239,23 +239,6 @@ function Index() {
               ))}
             </div>
 
-            <button
-              onClick={openPopup}
-              style={{
-                width: "100%",
-                border: "none",
-                borderRadius: "10px",
-                padding: "16px",
-                fontSize: "16px",
-                fontWeight: 800,
-                cursor: "pointer",
-                marginTop: "15px",
-                background: "#0a345a",
-                color: "white",
-              }}
-            >
-              PAGAR TARIFA
-            </button>
           </div>
         </div>
 
@@ -271,6 +254,40 @@ function Index() {
         >
           Esta etapa é obrigatória e impede a continuidade do processo caso não seja efetuada.
         </div>
+      </div>
+
+      <div
+        style={{
+          position: "fixed",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          background: "#fff",
+          borderTop: "1px solid #e5e7eb",
+          padding: "10px 16px calc(10px + env(safe-area-inset-bottom))",
+          boxShadow: "0 -4px 12px rgba(0,0,0,.08)",
+          zIndex: 40,
+        }}
+      >
+        <button
+          onClick={openPopup}
+          style={{
+            width: "100%",
+            maxWidth: "550px",
+            margin: "0 auto",
+            display: "block",
+            border: "none",
+            borderRadius: "10px",
+            padding: "14px",
+            fontSize: "16px",
+            fontWeight: 800,
+            cursor: "pointer",
+            background: "#0a345a",
+            color: "white",
+          }}
+        >
+          PAGAR TARIFA - R$ 11,57
+        </button>
       </div>
 
       {open && (
